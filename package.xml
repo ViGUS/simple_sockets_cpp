@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>simple_sockets_cpp</name>
+  <version>0.0.1</version>
+  <description>This package...</description>
+  <maintainer email="prs@us.es">Pablo Ramon Soria</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <run_depend>roscpp</run_depend>
+
+  <export>
+  
+  </export>
+</package>
