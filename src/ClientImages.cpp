@@ -1,7 +1,7 @@
-#include "client.h"
-#include "com/Socket.h"
+#include <simple_sockets_cpp/ClientImages.h>
+#include <simple_sockets_cpp/com/Socket.h>
 
-Client::Client(int _port, std::string _ip)
+ClientImages::ClientImages(int _port, std::string _ip)
 {
     mPort=_port;
     std::cout << "Trying connection to server "<< _ip << " in port " <<_port  << std::endl;
@@ -10,7 +10,7 @@ Client::Client(int _port, std::string _ip)
     ///mComThread = new std::thread (&Server::comCallBack,this);
 }
 
-void Client::retrieve(cv::Mat &_img)
+void ClientImages::retrieve(cv::Mat &_img)
 {
     unsigned char buffer[1024];
     int sizePicture;

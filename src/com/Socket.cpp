@@ -7,12 +7,12 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-#include "Socket.h"
+#include <simple_sockets_cpp/com/Socket.h>
 
-#include "ServerSocketTCP.h"
-#include "ClientSocketTCP.h"
-#include "ServerSocketUDP.h"
-#include "ClientSocketUDP.h"
+#include <simple_sockets_cpp/com/ServerSocketTCP.h>
+#include <simple_sockets_cpp/com/ClientSocketTCP.h>
+#include <simple_sockets_cpp/com/ServerSocketUDP.h>
+#include <simple_sockets_cpp/com/ClientSocketUDP.h>
 
 #include <cassert>
 

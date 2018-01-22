@@ -4,11 +4,11 @@
 #include <string>
 #include <vector>
 #include <opencv2/opencv.hpp>
-#include "com/Socket.h"
+#include <simple_sockets_cpp/com/Socket.h>
 
-class Server {
+class ServerImages {
 public:
-    Server(int _Port);
+    ServerImages(int _Port);
     void send(cv::Mat _img, int _percent);
 private:
     int mPort;

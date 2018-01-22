@@ -1,15 +1,15 @@
-#include "server.h"
-#include "com/Socket.h"
+#include <simple_sockets_cpp/ServerImages.h>
+#include <simple_sockets_cpp/com/Socket.h>
 
 
-Server::Server(int _port) {
+ServerImages::ServerImages(int _port) {
     mPort=_port;
     std::cout << "Initialized server in ip 0.0.0.0 and port " << _port << std::endl;
     socket=BOViL::comm::Socket::createSocket(BOViL::comm::eSocketType::serverTCP, std::to_string(_port).c_str(), "0.0.0.0");
     std::cout << "Server socket created"<< std::endl;
 }
 
-void Server::send(cv::Mat _img, int _percent) {
+void ServerImages::send(cv::Mat _img, int _percent) {
 
     unsigned char buffer[1024];
 

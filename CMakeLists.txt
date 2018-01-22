@@ -35,6 +35,18 @@ if(CMAKE_COMPILER_IS_GNUCXX)
     add_definitions(-std=c++11)
 endif()
 
+
+
+find_package(catkin REQUIRED COMPONENTS
+			roscpp
+			)
+
+catkin_package(
+  INCLUDE_DIRS include
+  CATKIN_DEPENDS roscpp
+)
+
+
 # Find 3rd party packages
 find_package(OpenCV 3.1 REQUIRED HINTS /usr/local)
 set_target_properties(${OpenCV_LIBS} PROPERTIES MAP_IMPORTED_CONFIG_RELWITHDEBINFO RELEASE)
@@ -44,7 +56,10 @@ LINK_DIRECTORIES(${OpenCV_LIB_DIR})
 SET(LIB_NAME simple_sockets_cpp)
 
 add_library(${LIB_NAME}  STATIC ${COMCOMING_SOURCE_FILES})
-target_include_directories(${LIB_NAME}  PUBLIC ${PROJECT_SOURCE_DIR})
+target_include_directories(${LIB_NAME}  PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 target_include_directories(${LIB_NAME} PUBLIC ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(${LIB_NAME} LINK_PUBLIC ${OpenCV_LIBS})
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${catkin_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})

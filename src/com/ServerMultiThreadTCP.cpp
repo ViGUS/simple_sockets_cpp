@@ -6,7 +6,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-#include "ServerMultiThreadTCP.h"
+#include <simple_sockets_cpp/com/ServerMultiThreadTCP.h>
 
 #include <mutex>
 #include <cassert>

@@ -7,7 +7,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 
 
-#include "SocketUDP.h"
+#include <simple_sockets_cpp/com/SocketUDP.h>
 
 namespace BOViL{
 	namespace comm{

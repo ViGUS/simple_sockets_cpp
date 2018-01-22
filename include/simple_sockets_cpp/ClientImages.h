@@ -5,12 +5,11 @@
 #include <thread>
 #include <vector>
 #include <opencv2/opencv.hpp>
-#include "com/Socket.h"
+#include <simple_sockets_cpp/com/Socket.h>
 
-class Client
-{
+class ClientImages {
 public:
-    Client(int _port, std::string _ip);
+    ClientImages(int _port, std::string _ip);
     void retrieve(cv::Mat &_img);
 private:
     std::vector<unsigned char> mCompressImage;

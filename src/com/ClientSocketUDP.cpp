@@ -6,7 +6,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-#include "ClientSocketUDP.h"
+#include <simple_sockets_cpp/com/ClientSocketUDP.h>
 
 #if defined(__linux__)
 	#include <arpa/inet.h>

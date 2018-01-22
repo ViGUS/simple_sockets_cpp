@@ -6,8 +6,8 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-#include "SocketTCP.h"
-#include "Socket.h"
+#include <simple_sockets_cpp/com/SocketTCP.h>
+#include <simple_sockets_cpp/com/Socket.h>
 
 namespace BOViL{
 	namespace comm{
